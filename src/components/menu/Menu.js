@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import './menu.scss'
+import './menu.css'
 import Button from '@mui/material/Button'
 import CalculateIcon from '@mui/icons-material/Calculate';
 import CategoryIcon from '@mui/icons-material/Category';

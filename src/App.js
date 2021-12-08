@@ -1,4 +1,4 @@
-import './App.scss';
+import './App.css';
 import { useState } from 'react';
 import Header from './components/header/Header';
 import Keypad from './components/keypad/Keypad';

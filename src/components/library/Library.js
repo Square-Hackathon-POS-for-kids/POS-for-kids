@@ -1,4 +1,4 @@
-import './library.scss';
+import './library.css';
 
 const Library = ({items}) => {
   return (

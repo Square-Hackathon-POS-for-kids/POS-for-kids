@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import './header.scss'
+import './header.css'
 import Menu from '../menu/Menu'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
