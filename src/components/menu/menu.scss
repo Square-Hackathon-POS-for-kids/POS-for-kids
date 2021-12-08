@@ -1,0 +1,28 @@
+
+.menu {
+  width: 100%;
+
+  .flex-row {
+    justify-content: space-between;
+  }
+}
+
+.menuItems {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  padding-left: 0;
+
+  li {
+    margin-right: 5px;
+
+    img {
+      margin-right: 5px;
+    }
+  }
+}
+
+.settings {
+  width: 30px;
+}

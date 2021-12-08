@@ -1,12 +1,23 @@
 import PropTypes from 'prop-types'
+import './header.scss'
+import Menu from '../menu/Menu'
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
-const Header = ({firstName, lastName}) => {
+const Header = ({firstName, lastName, setPage}) => {
   return (
-    <header>
-      <h1>header</h1>
-      <div>
-        <p>{firstName}</p> <p>{lastName}</p>
+    <header className='header'>
+      <div className='wrapper flex-row'>
+        <div className='profile'>
+          <img className='profile-photo' src='/assets/child.jpeg' alt='image of child' />
+          <p>{firstName} {lastName}</p>
+        </div>
+        <div className='heading-container'>
+          <ShoppingCartOutlinedIcon />
+          <h1 className='heading'>Checkout</h1>
+        </div>
+        <div/>
       </div>
+        <Menu setPage={setPage}/>
     </header>
   )
 }
@@ -18,7 +29,8 @@ Header.defaultProps = {
 
 Header.propTypes = {
   firstName: PropTypes.string.isRequired,
-  lastName: PropTypes.string.isRequired
+  lastName: PropTypes.string.isRequired,
+  setPage: PropTypes.func.isRequired
 }
 
 export default Header

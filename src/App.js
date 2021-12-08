@@ -1,11 +1,20 @@
 import './App.scss';
+import { useState } from 'react';
 import Header from './components/header/Header';
+import Keypad from './components/keypad/Keypad';
+import Library from './components/library/Library';
 
 const App = () => {
+
+  const [page, setPage] = useState('library')
+
+
   return (
     <div className='App'>
-      <Header className='App-header' />
-      <h1>POS for kids</h1>
+      <Header className='App-header' setPage={setPage} />
+      <div className='wrapper'>
+        {page === 'library'? <Library/> : <Keypad/>}
+      </div>
     </div>
   );
 }
