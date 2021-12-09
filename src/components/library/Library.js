@@ -46,7 +46,32 @@ Library.defaultProps = {
       name: 'GSC Peanut Butter Patties',
       src: '/assets/item-tiles/gsc-peanut-butter-patties.png',
       price: 5.00
-    }
+    },
+    {
+      name: 'GSC Adventurefuls',
+      src: '/assets/item-tiles/gsc-adventurefuls.png',
+      price: 5.00
+    },
+    {
+      name: 'GSC Lemon-Ups',
+      src: '/assets/item-tiles/gsc-lemon-ups.png',
+      price: 5.00
+    },
+    {
+      name: 'GSC Samoas',
+      src: '/assets/item-tiles/gsc-samoas.png',
+      price: 5.00
+    },
+    {
+      name: 'GSC Toffee-Tastic',
+      src: '/assets/item-tiles/gsc-toffee-tastic.png',
+      price: 5.00
+    },
+    {
+      name: 'GSC Trefoils',
+      src: '/assets/item-tiles/gsc-trefoils.png',
+      price: 5.00
+    },
   ]
 }
 
