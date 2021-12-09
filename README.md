@@ -1,7 +1,8 @@
 ### To Do List
 - [ ] finish adding the GS cookies in Library - ashley
 - [ ] work on the look of the keypad which would be in css/html (we can pair on the functionality) - ashley
-- [ ] add the responsive functionality when you click on a GS cookie icon
+- [ ] add quantity icon on top left of cookie images
+- [X] add the responsive functionality when you click on a GS cookie icon
 - [X] make the sidebar in Library/Keyboard (conditional rendering) - melody
 - [ ] add functionality to remove cookies
 - [ ] make static cash/cc page 
