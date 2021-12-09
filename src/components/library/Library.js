@@ -1,14 +1,27 @@
-import './library.css';
+import './library.css'
+import Button from '@mui/material/Button'
+import ImageList from '@mui/material/ImageList';
+import ImageListItem from '@mui/material/ImageListItem';
+
 
 const Library = ({items}) => {
   return (
-    <div>
+    <ImageList className='library-list' cols={3}>
       {items.map((item) => {
         return (
-          <img src={item.src} alt={item.name} />
+          <Button>
+            <ImageListItem key={item.img}>
+              <img
+                src={`${item.src}`}
+                srcSet={`${item.src}`}
+                alt={item.name}
+                loading="lazy"
+              />
+            </ImageListItem>
+          </Button>
         )
       })}
-    </div>
+    </ImageList>
   )
 }
 
