@@ -8,7 +8,7 @@ const Header = ({firstName, lastName, setPage}) => {
     <header className='header'>
       <div className='wrapper flex-row'>
         <div className='profile'>
-          <img className='profile-photo' src='/assets/child.jpeg' alt='image of child' />
+          <img className='profile-photo' src='/assets/child.jpeg' alt='Avatar of child' />
           <p>{firstName} {lastName}</p>
         </div>
         <div className='heading-container'>

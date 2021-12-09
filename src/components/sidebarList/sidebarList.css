@@ -1,0 +1,30 @@
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.sidebarList .column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.sidebarList .column.name {
+  flex: 20;
+}
+
+.sidebarList .column.price {
+  flex: 10;
+}
+
+.sidebarList button {
+  min-width: auto;
+}
+
+.sidebarList .count {
+  min-width: 30px;
+  text-align: center;
+}
