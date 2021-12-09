@@ -1,0 +1,15 @@
+.App .sidebar {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 450px;
+}
+
+.sidebar .total-btn {
+  position: fixed;
+  bottom: 0;
+  width: 400px;
+  padding: 15px;
+  margin-bottom: 40px;
+}
