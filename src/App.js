@@ -4,6 +4,7 @@ import Header from './components/header/Header';
 import Keypad from './components/keypad/Keypad';
 import Library from './components/library/Library';
 import Sidebar from './components/sidebar/Sidebar';
+import CheckoutModal from './components/checkoutModal/CheckoutModal';
 
 const App = () => {
 
@@ -42,6 +43,7 @@ const App = () => {
         {page === 'library'? <Library manageCart={manageCart}/> : <Keypad manageCart={manageCart}/>}
         <Sidebar itemsInCart={itemsInCart} page={page} manageCart={manageCart}/>
       </main>
+      <CheckoutModal />
     </div>
   );
 }
