@@ -4,7 +4,7 @@
 - [ ] add quantity icon on top left of cookie images
 - [X] add the responsive functionality when you click on a GS cookie icon
 - [X] make the sidebar in Library/Keyboard (conditional rendering) - melody
-- [ ] add functionality to remove cookies
+- [X] add functionality to remove cookies
 - [ ] make static cash/cc page 
 - [ ] make static Done! page 
 
