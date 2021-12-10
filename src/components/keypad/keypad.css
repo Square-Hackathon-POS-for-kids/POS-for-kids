@@ -12,9 +12,8 @@
 
 .keypad-list {
   display: flex;
-  width: 763px;
   gap: 0;
-  grid-auto-rows: minmax(140px, auto);
+  grid-auto-rows: minmax(213px, auto);
 }
 
 .keypad .keypad-button {

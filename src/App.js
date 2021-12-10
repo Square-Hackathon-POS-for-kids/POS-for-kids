@@ -5,6 +5,7 @@ import Keypad from './components/keypad/Keypad';
 import Library from './components/library/Library';
 import Sidebar from './components/sidebar/Sidebar';
 import CheckoutModal from './components/checkoutModal/CheckoutModal';
+import TransactionCompleteModal from './components/transactionCompleteModal/TransactionCompleteModal';
 
 const App = () => {
 
@@ -43,6 +44,7 @@ const App = () => {
         <Sidebar itemsInCart={itemsInCart} page={page} manageCart={manageCart}/>
       </main>
       <CheckoutModal />
+      <TransactionCompleteModal setItemsInCart={setItemsInCart}/>
     </div>
   );
 }

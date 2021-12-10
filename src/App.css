@@ -35,3 +35,9 @@ main.flex-row {
   flex-grow: 1;
   align-items: flex-start;
 }
+
+.center {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}

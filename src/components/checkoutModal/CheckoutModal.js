@@ -33,7 +33,7 @@ const CheckoutModal = () => {
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
-        class="checkoutModal"
+        className="checkoutModal"
       >
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2">

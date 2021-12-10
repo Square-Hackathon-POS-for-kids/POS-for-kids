@@ -1,7 +1,5 @@
 .library-list {
   flex-grow: 1;
-  width: 763px;
-  max-width: 763px;
 }
 
 .library-list .MuiButton-root {
