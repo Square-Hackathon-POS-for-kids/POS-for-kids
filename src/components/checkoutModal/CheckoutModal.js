@@ -38,13 +38,15 @@ const CheckoutModal = ({open, handleClose, calculatedTotal}) => {
       >
         <Box sx={style}>
 
-        <h2>
-        <Button className='total-btn' onClick={()=>handleClose()}><CancelIcon style={{ color: 'white' }} sx={{ fontSize: 50 }} /></Button>
-        Cancel</h2>
+        <div className="modalCancelButton">
+          <h2>
+          <Button className='total-btn' onClick={()=>handleClose()}><CancelIcon style={{ color: 'white' }} sx={{ fontSize: 50 }} /></Button>
+          Cancel</h2>
+        </div>
 
           {/* <img className='receipt-photo' src='/assets/completed-transaction-icons/receipt-paper_icon.svg' alt='Receipt' /> */}
           <div className="modalTotal">
-            <PointOfSaleIcon sx={{ fontSize: 100 }}/>
+            <PointOfSaleIcon sx={{ fontSize: 120 }}/>
             <h1>{calculatedTotal()}</h1>
           </div>
 
@@ -56,8 +58,11 @@ const CheckoutModal = ({open, handleClose, calculatedTotal}) => {
 
             <h2> <PaidIcon sx={{ fontSize: 50 }} /> Cash</h2>
           </div>
-          <br></br>
-          <hr></hr>
+
+          <div className="modalLine">
+            <hr></hr>
+          </div>
+
           <div className="modalCreditCard">
             <h2> <CreditCardIcon sx={{ fontSize: 50 }}/> Enter credit card number </h2>
           </div>
