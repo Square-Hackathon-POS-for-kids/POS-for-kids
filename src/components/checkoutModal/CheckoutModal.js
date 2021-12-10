@@ -38,25 +38,29 @@ const CheckoutModal = ({open, handleClose, calculatedTotal}) => {
       >
         <Box sx={style}>
 
-        <Button className='total-btn' onClick={()=>handleClose()}><CancelIcon style={{ color: 'white' }}/></Button>
+        <h2>
+        <Button className='total-btn' onClick={()=>handleClose()}><CancelIcon style={{ color: 'white' }} sx={{ fontSize: 50 }} /></Button>
+        Cancel</h2>
 
           {/* <img className='receipt-photo' src='/assets/completed-transaction-icons/receipt-paper_icon.svg' alt='Receipt' /> */}
-          <div className="modalHeading">
+          <div className="modalTotal">
+            <PointOfSaleIcon sx={{ fontSize: 100 }}/>
             <h1>{calculatedTotal()}</h1>
-            <PointOfSaleIcon/>
+          </div>
+
+          <div className="modalText">
             <h3>Swipe, insert, or tap to pay</h3>
           </div>
 
           <div className="modalCash">
-            <PaidIcon/>
-            <h2>Cash</h2>
+
+            <h2> <PaidIcon sx={{ fontSize: 50 }} /> Cash</h2>
           </div>
           <br></br>
+          <hr></hr>
           <div className="modalCreditCard">
-            <CreditCardIcon/>
-            <h2>Enter credit card number</h2>
+            <h2> <CreditCardIcon sx={{ fontSize: 50 }}/> Enter credit card number </h2>
           </div>
-
 
           {/* <Typography id="modal-modal-title" variant="h6" component="h2">
             Text in a modal

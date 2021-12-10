@@ -1,3 +1,20 @@
-.modalHeading h1{
-    font-size: 30px;
+.modalTotal {
+    font-size: 100px;
+    text-align: center;
 }
+
+.modalText {
+    font-size: 30px;
+    text-align: center;
+}
+
+.modalCash {
+    font-size: 20px;
+    text-align: left;
+}
+
+.modalCreditCard {
+    font-size: 20px;
+    text-align: left;
+}
+
