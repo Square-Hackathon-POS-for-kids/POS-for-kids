@@ -2,23 +2,27 @@ import './library.css'
 import Button from '@mui/material/Button'
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+import Badge from '@mui/material/Badge';
 
-const Library = ({items, manageCart}) => {
+const Library = ({items, manageCart, itemsInCart}) => {
   return (
     <ImageList className='library-list' cols={3}>
       {items.map((item) => {
+        const itemCount = itemsInCart[item.id]? itemsInCart[item.id].count : 0;
         return (
-          <Button key={item.name} onClick={()=>manageCart({item:item, toIncrement:true})}>
-            <ImageListItem>
-              <img
-                src={`${item.src}`}
-                srcSet={`${item.src}`}
-                alt={item.name}
-                loading="lazy"
-              />
-            </ImageListItem>
-          </Button>
+          <Badge key={item.name} className='badge' badgeContent={itemCount} color="primary">
+            <Button onClick={()=>manageCart({item:item, toIncrement:true})}>
+              <ImageListItem>
+                <img
+                  src={`${item.src}`}
+                  srcSet={`${item.src}`}
+                  alt={item.name}
+                  loading="lazy"
+                />
+              </ImageListItem>
+            </Button>
+          </Badge>
         )
       })}
     </ImageList>
@@ -31,7 +35,7 @@ Library.defaultProps = {
       id: 'gsc-thin-mints',
       name: 'GSC Thin Mints',
       src: '/assets/item-tiles/gsc-thin-mints.png',
-      price: 5.00
+      price: 5.01
     },
     {
       id: 'gsc-do-si-dos',
@@ -81,7 +85,8 @@ Library.defaultProps = {
 
 Library.propTypes = {
   items: PropTypes.array.isRequired,
-  manageCart: PropTypes.func.isRequired
+  manageCart: PropTypes.func.isRequired,
+  itemsInCart: PropTypes.object.isRequired
 }
 
 export default Library
