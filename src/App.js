@@ -39,7 +39,8 @@ const App = () => {
         itemChange = {
           name: item.name,
           price: item.price,
-          count: 1
+          count: 1,
+          id: item.id
         }
       }
       setItemsInCart({...itemsInCart, [item.id]:itemChange});
@@ -63,7 +64,7 @@ const App = () => {
 
   return (
     <div className='App'>
-      <Header className='App-header' setPage={setPage} />
+      <Header className='App-header' setPage={setPage} page={page}/>
       <main className='flex-row'>
         {page === 'library'? <Library manageCart={manageCart} itemsInCart={itemsInCart}/> : <Keypad manageCart={manageCart}/>}
         <Sidebar itemsInCart={itemsInCart} page={page} manageCart={manageCart} handleOpen={handleOpen} calculatedTotal={calculatedTotal} open={open}/>

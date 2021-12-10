@@ -11,7 +11,7 @@ const Library = ({items, manageCart, itemsInCart}) => {
       {items.map((item) => {
         const itemCount = itemsInCart[item.id]? itemsInCart[item.id].count : 0;
         return (
-          <Badge key={item.name} className='badge' badgeContent={itemCount} color="primary">
+          <Badge key={item.name} className={ `badge ${item.id}`} badgeContent={itemCount} color="primary">
             <Button onClick={()=>manageCart({item:item, toIncrement:true})}>
               <ImageListItem>
                 <img
@@ -35,7 +35,7 @@ Library.defaultProps = {
       id: 'gsc-thin-mints',
       name: 'GSC Thin Mints',
       src: '/assets/item-tiles/gsc-thin-mints.png',
-      price: 5.01
+      price: 5.00
     },
     {
       id: 'gsc-do-si-dos',

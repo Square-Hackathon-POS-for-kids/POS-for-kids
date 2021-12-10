@@ -16,6 +16,16 @@
   flex: 20;
 }
 
+.sidebarList .column.name span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.sidebarList .column.price span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
 .sidebarList .column.price {
   flex: 10;
 }
@@ -27,4 +37,41 @@
 .sidebarList .count {
   min-width: 30px;
   text-align: center;
+}
+
+
+.gsc-thin-mints.column  {
+  color: #08B43E;
+}
+
+.gsc-do-si-dos.column  {
+  color: #FFBF01;
+}
+
+.gsc-caramel-delites.column  {
+  color: #2996CC;
+}
+
+.gsc-peanut-butter-patties.column  {
+  color: #CC0124;
+}
+
+.gsc-adventurefuls.column  {
+  color: tan;
+}
+
+.gsc-lemon-ups.column  {
+  color: #FFC00F;
+}
+
+.gsc-samoas.column  {
+  color: pink;
+}
+
+.gsc-toffee-tastic.column  {
+  color:  cyan;
+}
+
+.gsc-trefoils.column  {
+  color:  #2D98CC;
 }

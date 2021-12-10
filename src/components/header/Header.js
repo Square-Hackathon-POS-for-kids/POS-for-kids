@@ -3,7 +3,7 @@ import './header.css'
 import Menu from '../menu/Menu'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
-const Header = ({firstName, lastName, setPage}) => {
+const Header = ({firstName, lastName, setPage, page}) => {
   return (
     <header className='header'>
       <div className='wrapper flex-row'>
@@ -17,7 +17,7 @@ const Header = ({firstName, lastName, setPage}) => {
         </div>
         <div/>
       </div>
-        <Menu setPage={setPage}/>
+        <Menu setPage={setPage} page={page}/>
     </header>
   )
 }

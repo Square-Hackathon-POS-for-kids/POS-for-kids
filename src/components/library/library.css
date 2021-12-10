@@ -14,3 +14,39 @@
   border-radius: 50%;
   font-size: 20px;
 }
+
+.gsc-thin-mints.badge .MuiBadge-badge  {
+  background-color: #08B43E;
+}
+
+.gsc-do-si-dos .MuiBadge-badge  {
+  background-color: #FFBF01;
+}
+
+.gsc-caramel-delites .MuiBadge-badge  {
+  background-color: #2996CC;
+}
+
+.gsc-peanut-butter-patties .MuiBadge-badge  {
+  background-color: #CC0124;
+}
+
+.gsc-adventurefuls .MuiBadge-badge  {
+  background-color: tan;
+}
+
+.gsc-lemon-ups .MuiBadge-badge  {
+  background-color: #FFC00F;
+}
+
+.gsc-samoas .MuiBadge-badge  {
+  background-color: pink;
+}
+
+.gsc-toffee-tastic .MuiBadge-badge  {
+  background-color:  cyan;
+}
+
+.gsc-trefoils .MuiBadge-badge  {
+  background-color:  #2D98CC;
+}

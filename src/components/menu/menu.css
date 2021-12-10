@@ -13,6 +13,7 @@
   align-items: center;
   list-style-type: none;
   padding-left: 0;
+  margin: 15px;
 }
 
 .menuItems li {
@@ -25,4 +26,20 @@
 
 .settings {
   width: 30px;
+}
+
+.menu button {
+  font-size: 25px;
+  margin-right: 20px;
+  background-color: #006AFF;
+}
+
+.menu button:hover,
+.menu button.active {
+  color: #006AFF;
+  background-color: white;
+}
+
+.menu button span .MuiSvgIcon-root {
+  font-size: 30px;
 }

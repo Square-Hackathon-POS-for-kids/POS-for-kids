@@ -22,7 +22,7 @@ const Keypad = ({manageCart}) => {
       const customProduct = {
         id: customProductID,
         name: 'Custom Product',
-        price: Number(customProductValue)
+        price: Number(customProductValue),
       }
       manageCart({item:customProduct, toIncrement:true})
     } else {
