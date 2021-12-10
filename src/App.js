@@ -12,7 +12,6 @@ const App = () => {
   const [itemsInCart, setItemsInCart] = useState({});
 
   const manageCart = ({item, toIncrement}) => {
-    console.log('managecart', item);
     let itemChange = itemsInCart[item.id];
     if (toIncrement) {
       if(itemsInCart[item.id]) {
@@ -40,7 +39,7 @@ const App = () => {
     <div className='App'>
       <Header className='App-header' setPage={setPage} />
       <main className='flex-row'>
-        {page === 'library'? <Library manageCart={manageCart}/> : <Keypad manageCart={manageCart}/>}
+        {page === 'library'? <Library manageCart={manageCart} itemsInCart={itemsInCart}/> : <Keypad manageCart={manageCart}/>}
         <Sidebar itemsInCart={itemsInCart} page={page} manageCart={manageCart}/>
       </main>
       <CheckoutModal />

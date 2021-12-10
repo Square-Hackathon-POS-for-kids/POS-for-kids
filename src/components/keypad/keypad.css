@@ -1,0 +1,31 @@
+.keypad {
+  margin-top: 10px;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.keypad input {
+  margin: 10px 0;
+}
+
+.keypad-list {
+  display: flex;
+  width: 763px;
+  gap: 0;
+  grid-auto-rows: minmax(140px, auto);
+}
+
+.keypad .keypad-button {
+  font-size: 35px;
+  background-color: white;
+  color: black;
+  border: 1px solid lightgray;
+  border-radius: 0;
+}
+
+.keypad .keypad-button:hover {
+  background-color: #006AFF;
+  color: white;
+}
