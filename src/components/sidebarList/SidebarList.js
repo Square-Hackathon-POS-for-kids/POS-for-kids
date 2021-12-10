@@ -16,9 +16,9 @@ const SidebarList = ({itemsInCart, manageCart}) => {
           <ListItem className='sidebarList row' key={item}>
             <ListItemText className='column name' primary={name}/>
             <ListItemText className='column price' primary={formattedPrice}/>
-            <Button variant='contained' onClick={()=>manageCart({item:{...itemsInCart[item],id:item}, toIncrement:true})}> + </Button>
-            <ListItemText className='column count' primary={count}/>
             <Button variant='contained' onClick={()=>manageCart({item:{...itemsInCart[item],id:item}, toIncrement:false})}> - </Button>
+            <ListItemText className='column count' primary={count}/>
+            <Button variant='contained' onClick={()=>manageCart({item:{...itemsInCart[item],id:item}, toIncrement:true})}> + </Button>
           </ListItem>
         )
         })
