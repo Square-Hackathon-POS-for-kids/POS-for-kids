@@ -3,7 +3,7 @@ import Container from '@mui/material/Container';
 import SidebarList from '../sidebarList/SidebarList';
 import EmptySidebar from '../emptySidebar/EmptySidebar';
 import Button from '@mui/material/Button'
-import currencyFormatter from '../../helpers/currencyFormatter';
+
 import './sidebar.css'
 
 const numOfItemsInCart = (itemsInCartLength) => {
@@ -14,21 +14,14 @@ const numOfItemsInCart = (itemsInCartLength) => {
   }
 }
 
-const calculateTotal = (itemsInCart) => {
-  const total = Object.keys(itemsInCart).reduce((acc, curr) => {
-    return acc + itemsInCart[curr].price * itemsInCart[curr].count;
-  }, 0);
-  return currencyFormatter(total);
-};
-
-const Sidebar = ({itemsInCart, page, manageCart}) => {
+const Sidebar = ({itemsInCart, page, manageCart, handleOpen, calculatedTotal}) => {
   const itemsInCartLength = Object.keys(itemsInCart).length;
-  const total = calculateTotal(itemsInCart);
+  const total = calculatedTotal();
   return (
     <Container className='sidebar' maxWidth='sm'>
       <h2>Sale {numOfItemsInCart(itemsInCartLength)}</h2>
       {itemsInCartLength < 1 ?  <EmptySidebar page={page}/> : <SidebarList itemsInCart={itemsInCart} manageCart={manageCart} />}
-      <Button className='total-btn' variant='contained'>Total amount {total}</Button>
+      <Button className='total-btn' variant='contained' onClick={()=>handleOpen()}>Total amount {total} </Button>
     </Container>
   )
 }
