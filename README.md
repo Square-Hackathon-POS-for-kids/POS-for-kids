@@ -6,7 +6,7 @@
 - [X] make the sidebar in Library/Keyboard (conditional rendering) - melody
 - [X] add functionality to remove cookies
 - [ ] make static cash/cc page 
-- [ ] make static Done! page 
+- [X] make static Done! page 
 
 # Getting Started with Create React App
 
