@@ -26,9 +26,22 @@
     padding-right: 30px;
 }
 
+.total-btn h2,
+.modalCash button,
+.modalCreditCard button {
+    color: white;
+}
+
 .modalCreditCard {
     padding-left: 40px;
     font-size: 20px;
     text-align: left;
 }
 
+button h2 {
+    margin-left: 20px;
+}
+
+.checkout-modal {
+    padding: 30px;
+}

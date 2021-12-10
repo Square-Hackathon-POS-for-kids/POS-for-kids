@@ -10,12 +10,24 @@ import TransactionCompleteModal from './components/transactionCompleteModal/Tran
 
 const App = () => {
 
-  // For modal
+  // For Checkout Modal
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
+  // For transactionComplete Modal
+  const [isOpenTransactionModal, setTransactionModal] = useState(false);
+  const handleTransactionOpen = () => setTransactionModal(true);
+  const handleTransactionClose = () =>  {
+    setItemsInCart({});
+    handleClose();
+    setTransactionModal(false);
+  }
+
+  // For setting page
   const [page, setPage] = useState('library')
+
+  // For items in cart
   const [itemsInCart, setItemsInCart] = useState({});
 
   const manageCart = ({item, toIncrement}) => {
@@ -56,8 +68,8 @@ const App = () => {
         {page === 'library'? <Library manageCart={manageCart} itemsInCart={itemsInCart}/> : <Keypad manageCart={manageCart}/>}
         <Sidebar itemsInCart={itemsInCart} page={page} manageCart={manageCart} handleOpen={handleOpen} calculatedTotal={calculatedTotal} open={open}/>
       </main>
-      <CheckoutModal handleClose={handleClose} calculatedTotal={calculatedTotal} open={open}/>
-      <TransactionCompleteModal setItemsInCart={setItemsInCart}/>
+      <CheckoutModal handleClose={handleClose} calculatedTotal={calculatedTotal} open={open} handleTransactionOpen={handleTransactionOpen}/>
+      <TransactionCompleteModal handleTransactionOpen={handleTransactionOpen} handleTransactionClose={handleTransactionClose} isOpenTransactionModal={isOpenTransactionModal}/>
     </div>
   );
 }

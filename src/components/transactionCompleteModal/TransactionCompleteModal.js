@@ -2,16 +2,9 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
-import { useState } from 'react';
 import './transactionCompleteModal.css';
 
-const TransactionCompleteModal = ({setItemsInCart}) => {
-  const [isOpenTransactionModal, setTransactionModal] = useState(false);
-  const handleOpen = () => setTransactionModal(true);
-  const handleClose = () =>  {
-    setItemsInCart({})
-    setTransactionModal(false);
-  }
+const TransactionCompleteModal = ({handleTransactionOpen, handleTransactionClose, isOpenTransactionModal}) => {
 
   const style = {
     position: 'absolute',
@@ -29,10 +22,9 @@ const TransactionCompleteModal = ({setItemsInCart}) => {
 
   return (
     <div>
-      <Button onClick={handleOpen}>Open modal</Button>
       <Modal
         open={isOpenTransactionModal}
-        onClose={handleClose}
+        onClose={handleTransactionClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
         className="completed-transaction"
@@ -60,7 +52,7 @@ const TransactionCompleteModal = ({setItemsInCart}) => {
                 <Button variant='contained'>Email</Button>
               </div>
               <div className='row center button-container'>
-                <Button variant='contained' onClick={handleClose}>No Receipt</Button>
+                <Button variant='contained' onClick={handleTransactionClose}>No Receipt</Button>
               </div>
             </main>
           </div>

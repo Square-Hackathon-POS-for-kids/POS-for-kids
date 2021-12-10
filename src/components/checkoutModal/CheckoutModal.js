@@ -1,17 +1,13 @@
-// copied from: https://mui.com/components/modal/
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
-import { useState } from 'react';
-import './checkoutModal.css';
 import PaidIcon from '@mui/icons-material/Paid';
 import PointOfSaleIcon from '@mui/icons-material/PointOfSale';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
 import CancelIcon from '@mui/icons-material/Cancel';
 import './checkoutModal.css'
 
-const CheckoutModal = ({open, handleClose, calculatedTotal}) => {
+const CheckoutModal = ({open, handleClose, calculatedTotal, handleTransactionOpen}) => {
 
   const style = {
     position: 'absolute',
@@ -37,42 +33,36 @@ const CheckoutModal = ({open, handleClose, calculatedTotal}) => {
         className="checkoutModal"
       >
         <Box sx={style}>
+          <div className='checkout-modal'>
+            <Button className='total-btn' onClick={()=>handleClose()}><CancelIcon style={{ color: 'white' }} sx={{ fontSize: 50 }} />
+              <h2>Cancel</h2>
+            </Button>
 
-        <div className="modalCancelButton">
-          <h2>
-          <Button className='total-btn' onClick={()=>handleClose()}><CancelIcon style={{ color: 'white' }} sx={{ fontSize: 50 }} /></Button>
-          Cancel</h2>
-        </div>
+            <div className="modalTotal">
+              <PointOfSaleIcon sx={{ fontSize: 100 }}/>
+              <h1>{calculatedTotal()}</h1>
+            </div>
 
-          {/* <img className='receipt-photo' src='/assets/completed-transaction-icons/receipt-paper_icon.svg' alt='Receipt' /> */}
-          <div className="modalTotal">
-            <PointOfSaleIcon sx={{ fontSize: 120 }}/>
-            <h1>{calculatedTotal()}</h1>
-          </div>
+            <div className="modalText">
+              <h3>Swipe, insert, or tap to pay</h3>
+            </div>
 
-          <div className="modalText">
-            <h3>Swipe, insert, or tap to pay</h3>
-          </div>
+            <div className="modalCash">
+              <Button onClick={handleTransactionOpen}>
+                <PaidIcon sx={{ fontSize: 50 }} />
+                <h2> Cash</h2>
+              </Button>
+            </div>
 
-          <div className="modalCash">
-
-            <h2> <PaidIcon sx={{ fontSize: 50 }} /> Cash</h2>
-          </div>
-
-          <div className="modalLine">
             <hr></hr>
-          </div>
 
-          <div className="modalCreditCard">
-            <h2> <CreditCardIcon sx={{ fontSize: 50 }}/> Enter credit card number </h2>
+            <div className="modalCreditCard">
+              <Button onClick={handleTransactionOpen}>
+                <CreditCardIcon sx={{ fontSize: 50 }}/>
+                <h2> Enter credit card number </h2>
+              </Button>
+            </div>
           </div>
-
-          {/* <Typography id="modal-modal-title" variant="h6" component="h2">
-            Text in a modal
-          </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-          </Typography> */}
         </Box>
       </Modal>
     </div>
