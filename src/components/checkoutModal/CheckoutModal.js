@@ -34,7 +34,7 @@ const CheckoutModal = ({open, handleClose, calculatedTotal}) => {
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
-        class="checkoutModal"
+        className="checkoutModal"
       >
         <Box sx={style}>
 

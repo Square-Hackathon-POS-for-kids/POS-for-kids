@@ -1,3 +1,12 @@
+.library-list {
+  flex-grow: 1;
+}
+
 .library-list .MuiButton-root {
   padding: 0;
+}
+
+.badge .MuiBadge-badge {
+  top: 15px;
+  right: 17px;
 }

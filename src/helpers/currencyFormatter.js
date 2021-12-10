@@ -1,5 +1,5 @@
 function currencyFormatter(num) {
-  return '$' + num.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+  return Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD',  minimumFractionDigits: 2 }).format(num)
 }
 
 export default currencyFormatter;

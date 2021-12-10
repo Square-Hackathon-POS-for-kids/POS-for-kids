@@ -6,6 +6,8 @@ import Library from './components/library/Library';
 import Sidebar from './components/sidebar/Sidebar';
 import CheckoutModal from './components/checkoutModal/CheckoutModal';
 import currencyFormatter from './helpers/currencyFormatter';
+import TransactionCompleteModal from './components/transactionCompleteModal/TransactionCompleteModal';
+
 const App = () => {
 
   // For modal
@@ -17,7 +19,6 @@ const App = () => {
   const [itemsInCart, setItemsInCart] = useState({});
 
   const manageCart = ({item, toIncrement}) => {
-    console.log('managecart', item);
     let itemChange = itemsInCart[item.id];
     if (toIncrement) {
       if(itemsInCart[item.id]) {
@@ -52,11 +53,11 @@ const App = () => {
     <div className='App'>
       <Header className='App-header' setPage={setPage} />
       <main className='flex-row'>
-        {page === 'library'? <Library manageCart={manageCart}/> : <Keypad manageCart={manageCart}/>}
-        <Sidebar itemsInCart={itemsInCart} page={page} manageCart={manageCart} handleOpen={handleOpen}
-          calculatedTotal={calculatedTotal} open={open}/>
+        {page === 'library'? <Library manageCart={manageCart} itemsInCart={itemsInCart}/> : <Keypad manageCart={manageCart}/>}
+        <Sidebar itemsInCart={itemsInCart} page={page} manageCart={manageCart} handleOpen={handleOpen} calculatedTotal={calculatedTotal} open={open}/>
       </main>
       <CheckoutModal handleClose={handleClose} calculatedTotal={calculatedTotal} open={open}/>
+      <TransactionCompleteModal setItemsInCart={setItemsInCart}/>
     </div>
   );
 }
